@@ -1,5 +1,7 @@
 <?php
 
+//Rotas
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
