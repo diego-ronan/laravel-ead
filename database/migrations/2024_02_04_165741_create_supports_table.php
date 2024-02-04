@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lessons', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('module_id')->nullable(false);
-            $table->string('name')->unique();
-            $table->string('url')->unique();
-            $table->string('video')->unique();
-            $table->text('description')->nullable();
+        Schema::create('supports', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -27,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lessons');
+        Schema::dropIfExists('supports');
     }
 };
